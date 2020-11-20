@@ -1,38 +1,210 @@
-.App {
-  text-align: center;
+:root{
+    --primaryColor : #2a2a72;
+    --secondaryColor: #009ffd;
+    --whiteColor: #ffffff;
+    --blackColor: #232528;
+    --yellowColor: #ffa400;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--whiteColor);
+    color: var(--blackColor);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a,a:hover{
+    text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.text-title{
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
 }
 
-.App-link {
-  color: #61dafb;
+.text-blue{
+    color: var(--primaryColor);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text-bright{
+    color: var(--secondaryColor);
 }
+
+.container{
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+p{
+    margin: 0px;
+}
+
+button{
+    font-family: inherit;
+    cursor: pointer;
+    outline: none;
+}
+
+/* navbar */
+
+.navbar{
+    background-color: var(--primaryColor);
+    border-radius: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 30px;
+}
+
+.fa-mobile{
+    font-size: 35px;
+    margin-top: 7px;
+    color: var(--whiteColor);
+}
+
+.nav-brand{
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 20px;
+    color: var(--whiteColor);
+}
+
+@media (max-width:480px){
+    .nav-brand{
+        display: none;
+    }
+}
+
+.navbar-row{
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.navbar-btn{
+    border: 2px solid var(--secondaryColor);
+    font-size: 17px;
+    margin-left: 20px;
+    background-color: transparent;
+    padding: 5px 20px;
+    color: var(--secondaryColor);
+    border-radius: 5px;
+}
+
+/* products */
+
+h1{
+    font-size: 35px;
+    text-transform: uppercase;
+    color: var(--primaryColor);
+}
+
+.product-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Card */
+
+.card-wrapper{
+    position: relative;
+    z-index: 1;
+    background-color: whitesmoke;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 10px 0px;
+    border-radius: 15px;
+    max-width: 100%;
+    width: 320px;
+    margin-bottom: 60px;
+}
+
+.card-wrapper:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    border: 1px solid gainsboro;
+}
+
+.img-container{
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid gainsboro;
+    transition: 0.3s;
+}
+
+.card-img{
+    max-width: 100%;
+    width: 80%;
+}
+
+.card-footer{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 20px 10px 20px;
+}
+
+.cart-icon{
+    font-size: 28px;
+}
+
+.cart-btn{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: 0;
+    color: white;
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 15px 0 0 0;
+    background-color: var(--secondaryColor);
+}
+
+.title,.price{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.price{
+    color: var(--secondaryColor);
+}
+
+/* details */
+.detail-row{
+    padding: 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.detail-img{
+    text-align: center;
+    width: 400px;
+}
+
+.detail-description{
+    width: 500px;
+}
+
+.btn-wrapper{
+    padding: 20px 0;
+}
+
+.btn-back{
+    border: 1px solid var(--secondaryColor);
+    color: var(--whiteColor);
+    background-color: var(--secondaryColor);
+    margin-right: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+
+.btn-cartBtn{
+    border: 1px solid var(--yellowColor);
+    background-color: var(--yellowColor);
+    color: var(--whiteColor);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
